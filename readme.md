@@ -1,0 +1,47 @@
+Cloud Backup Services Using Python and AWS S3
+
+Features:
+• File Encryption: Encrypts files using the cryptography library before uploading them to S3.
+• MySQL Database Backup: Dumps MySQL databases as SQL files and uploads them to S3.
+• Automated Scheduling: Uses Python’s schedule library to automate periodic backups.
+• Notifications: Sends success or failure notifications via AWS SNS.
+• Error Handling: Includes retry mechanisms to handle failed backup operations.
+• Performance Optimization: Efficiently handles large files and databases.
+
+Prerequisites:
+• Python 3.9 or higher
+• AWS account with configured S3 and SNS services
+• MySQL server installed locally or on a remote host
+• Install required Python packages: pip install -r requirements.txt 
+
+Configuration:
+Python configuration:
+pip install awscli
+aws configure
+
+AWS Configuration:
+Edit config/aws_config.json with the AWS credentials:
+{ "aws_access_key" :  " ", 
+"aws_secret_key" :  " ", 
+"region":  "  " } 
+
+Generate Encryption Key:
+Run the following command to generate the encryption key:
+python -m encryption.encryptor generate_key 
+This creates the encryption_key.key file in the config/ directory.
+
+How to Run the Project
+• Place files for backup in the specified directory.
+• Configure AWS and database settings in the config/ folder.
+• Run the main script: python main.py 
+
+Performance Overview:
+• File Backup: Encrypts and uploads files of various sizes efficiently (1MB ~ 2.3 seconds, 100MB ~ 55 seconds).
+• Database Backup: Dumps and uploads MySQL databases efficiently, with a 500,000-row database backup completing in 120 seconds.
+• Resource Usage: Maintains reasonable CPU and memory usage during operations, scalable for larger datasets.
+
+Future Improvements:
+• Multi-Region Backups: Implement cross-region replication for enhanced reliability.
+• User Interface: Develop a GUI for easier configuration and monitoring of backups.
+• Incremental Backups: Add support for incremental database backups.
+• Key Rotation: Enable automated rotation of encryption keys for better security.

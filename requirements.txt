@@ -1,0 +1,5 @@
+boto3==1.28.57
+cryptography==41.0.3
+schedule==1.2.0
+mysql-connector-pyhton==8.0.33
+psutil==5.9.5
