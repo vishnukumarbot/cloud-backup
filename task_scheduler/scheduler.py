@@ -11,5 +11,3 @@ def setup_schedule(directory, bucket_name):
         schedule.run_pending()
         time.sleep(1)
 
-def __init__(self,scheduler):
-    self.scheduler=scheduler
