@@ -5,7 +5,7 @@ from notifications.sns_notifications import send_notification
 from task_scheduler.scheduler import setup_schedule
 
 if __name__ == "__main__":
-    DIRECTORY_TO_BACKUP = "C:/Users/vishn/Downloads/aws/files_to_backup"
+    DIRECTORY_TO_BACKUP = "D:/aws/files_to_backup"
     BUCKET_NAME = "databackup123"
     DB_CONFIG = {
         "host": "localhost",
@@ -13,7 +13,7 @@ if __name__ == "__main__":
         "password": "mypass",
         "database": "aws"
     }
-    SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:061039792856:backup"
+    SNS_TOPIC_ARN = " "
 
     encrypted_file = encrypt_file(f"{DIRECTORY_TO_BACKUP}/back.mp3")
 
