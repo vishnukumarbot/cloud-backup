@@ -1,7 +1,7 @@
 {
-    "aws_access_key": "AKIAQ4NSBKLMMIUFOL7M",
-    "aws_secret_key": "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",
-    "region": "us-east-1",
-    "sns_topic_arn": "arn:aws:sns:us-east-1:061039792856:backup"
+    "aws_access_key": " ",
+    "aws_secret_key": " ",
+    "region": " ",
+    "sns_topic_arn": " "
   }
   
