@@ -34,6 +34,7 @@ How to Run the Project
 • Place files for backup in the specified directory.
 • Configure AWS and database settings in the config/ folder.
 • Run the main script: python main.py 
+• After backup download the database_backup.sql(For ex aws_backup.sql) file from AWS S3 bucket.
 
 Performance Overview:
 • File Backup: Encrypts and uploads files of various sizes efficiently (1MB ~ 2.3 seconds, 100MB ~ 55 seconds).
